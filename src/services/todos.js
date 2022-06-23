@@ -4,35 +4,36 @@ class TodoDataService{
 
     getAll(token){
         axios.defaults.headers.common["Authorization"] = "Token " + token; 
-        return axios.get('http://localhost:8000/api/todos/');
+        return axios.get('https://MavyCasta.pythonanywhere.com/api/todos/');
     }
+    
 
     createTodo(data, token){ 
         axios.defaults.headers.common["Authorization"] = "Token " + token; 
-        return axios.post("http://localhost:8000/api/todos/", data);
+        return axios.get('https://MavyCasta.pythonanywhere.com/api/todos/');
     }
 
     updateTodo(id, data, token){ 
         axios.defaults.headers.common["Authorization"] = "Token " + token; 
-        return axios.put(`http://localhost:8000/api/todos/${id}`, data);
+        return axios.get('https://MavyCasta.pythonanywhere.com/api/todos/');
     }
 
     deleteTodo(id, token){ 
         axios.defaults.headers.common["Authorization"] = "Token " + token; 
-        return axios.delete(`http://localhost:8000/api/todos/${id}`);
+        return axios.get('https://MavyCasta.pythonanywhere.com/api/todos/');
     }
 
     completeTodo(id, token){ 
         axios.defaults.headers.common["Authorization"] = "Token " + token; 
-        return axios.put(`http://localhost:8000/api/todos/${id}/complete`);
+        return axios.get('https://MavyCasta.pythonanywhere.com/api/todos/');
     }
 
     login(data){
-        return axios.post("http://localhost:8000/api/login/", data);
+        return axios.get('https://MavyCasta.pythonanywhere.com/api/todos/');
     }
 
     signup(data){
-        return axios.post("http://localhost:8000/api/signup/", data);
+        return axios.get('https://MavyCasta.pythonanywhere.com/api/todos/');
     }
 }
 
